@@ -10,6 +10,8 @@ REDIS_CLIENT=predis
 REDIS_HOST=redis
 
 DB_HOST=mysql
+
+REDIS_PREFIX=null
 ```
 
 using laradock (build containers if nessecery):
@@ -19,4 +21,15 @@ docker-compose up -d nginx mysql phpmyadmin redis workspace
 
 # start echo without -d for debug purpose
 docker-compose up laravel-echo-server
+```
+
+Terminals:
+``` bash
+# docker-compose exec workspace bash
+npm run watch
+redis-cli monitor
+
+# docker-compose exec redis bash
+docker-compose up laravel-echo-server
+artisan
 ```

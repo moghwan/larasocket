@@ -29,6 +29,7 @@ class HomeController extends Controller
 
     public function messenger()
     {
+        // event(new MsgSentEvent('ta hada message'));
         MsgSentEvent::dispatch('ta hada message');
         return view('messenger');
     }

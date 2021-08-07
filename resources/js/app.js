@@ -14,3 +14,9 @@ window.Echo = new Echo({
         }
     }
 });
+
+window.Echo.channel('channel-msg-sent')
+        .listen('.MsgSentEvent', (e) => {
+        console.log('wayliii ----------------- ');
+        console.info(e);
+    });
