@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\MsgSentEvent;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,6 +29,7 @@ class HomeController extends Controller
 
     public function messenger()
     {
+        MsgSentEvent::dispatch('ta hada message');
         return view('messenger');
     }
 }
