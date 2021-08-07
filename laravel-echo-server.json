@@ -9,10 +9,12 @@
 	],
 	"database": "redis",
 	"databaseConfig": {
-		"redis": {},
-		"sqlite": {
-			"databasePath": "/database/laravel-echo-server.sqlite"
-		}
+		"redis": {
+			"port": "6379",
+			"host": "localhost",
+			"keyPrefix": ""
+		},
+		"sqlite": {}
 	},
 	"devMode": true,
 	"host": null,
@@ -30,7 +32,7 @@
 	},
 	"apiOriginAllow": {
 		"allowCors": true,
-		"allowOrigin": "http://larasocket.test:80",
+		"allowOrigin": "http://localhost:80",
 		"allowMethods": "GET, POST",
 		"allowHeaders": "Origin, Content-Type, X-Auth-Token, X-Requested-With, Accept, Authorization, X-CSRF-TOKEN, X-Socket-Id"
 	}
