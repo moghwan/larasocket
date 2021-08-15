@@ -15,8 +15,10 @@ window.Echo = new Echo({
     }
 });
 
-window.Echo.channel('channel-msg-sent')
-        .listen('.MsgSentEvent', (e) => {
-        console.log('wayliii ----------------- ');
+window.Echo
+    .channel('channel-msg-sent')
+    .listen('.MsgSentEvent', function(e) {
+        console.log('3ala barakati llah');
         console.info(e);
-    });
+    }
+);

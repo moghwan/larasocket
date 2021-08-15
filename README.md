@@ -18,18 +18,17 @@ using laradock (build containers if nessecery):
 ``` bash
 # start containers
 docker-compose up -d nginx mysql phpmyadmin redis workspace
-
-# start echo without -d for debug purpose
-docker-compose up laravel-echo-server
 ```
 
 Terminals:
 ``` bash
 # docker-compose exec workspace bash
+artisan queue:work
 npm run watch
-redis-cli monitor
 
 # docker-compose exec redis bash
+redis-cli monitor
+
+# start echo without -d for debug purpose
 docker-compose up laravel-echo-server
-artisan
 ```
