@@ -58,7 +58,9 @@ class MessagesController extends Controller
 
         $thread->markAsRead($userId);
 
-        return view('messenger.show', compact('thread', 'users'));
+        $threads = Thread::getAllLatest()->get();
+
+        return view('messenger.show', compact('thread', 'threads', 'users'));
     }
 
     /**

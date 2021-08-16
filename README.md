@@ -1,7 +1,9 @@
-This laravel project was dockerized using laradock with some instructions i ghathered in an [old post](https://dev.to/moghwan/dockerize-your-laravel-project-with-laradock-2io1)
+# larasocket (WIP)
+
+This is just a reference laravel project that will use [cmgmyr/laravel-messenger](https://github.com/cmgmyr/laravel-messenger) with livewire, bootstrap 4 and socket.io, and dockerized using laradock with some instructions I ghathered in an [old post](https://dev.to/moghwan/dockerize-your-laravel-project-with-laradock-2io1).
 
 
-in your .env file:
+Update your `.env` file:
 ```
 BROADCAST_DRIVER=redis
 

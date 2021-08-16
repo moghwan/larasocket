@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
     <h1>Create a new message</h1>
@@ -26,7 +26,7 @@
                     @endforeach
                 </div>
             @endif
-    
+
             <!-- Submit Form Input -->
             <div class="form-group">
                 <button type="submit" class="btn btn-primary form-control">Submit</button>
